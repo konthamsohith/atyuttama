@@ -51,6 +51,10 @@ const Hero = () => {
                                 View Our Work
                             </Button>
                         </div>
+                        <div className="mt-4 flex gap-4 text-sm text-muted-foreground">
+                            <a href="/terms-and-conditions" className="hover:underline">Terms and Conditions</a>
+                            <a href="/privacy-policy" className="hover:underline">Privacy Policy</a>
+                        </div>
                     </Container>
                 </div>
             </Wrapper>
