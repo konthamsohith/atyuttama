@@ -1,17 +1,17 @@
 export const STATS = [
     {
-        title: "Projects Delivered",
-        value: "500+",
+        title: "People using our work",
+        value: "10,000+",
         icon: "/icons/moon.svg"
     },
     {
-        title: "Client Satisfaction Rate",
-        value: "98%",
+        title: "Countries",
+        value: "10",
         icon: "/icons/stars.svg"
     },
     {
-        title: "Expert Team Members",
-        value: "50+",
+        title: "Products shipped",
+        value: "15+",
         icon: "/icons/edit.svg"
     }
 ];

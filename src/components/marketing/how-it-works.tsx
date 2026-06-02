@@ -1,133 +1,90 @@
 import React from 'react'
 import Wrapper from "../global/wrapper";
 import Container from "../global/container";
-import Image from "next/image";
+
+const steps = [
+    {
+        number: "01",
+        title: "Scope",
+        subtitle: "& strategy",
+        description: "We pin down what you're actually trying to achieve, who it's for, and what “done” looks like. No vague briefs.",
+    },
+    {
+        number: "02",
+        title: "Design & build",
+        subtitle: "in sprints",
+        description: "We design and build in tight two-week sprints, with AI accelerating the grunt work. You get working demos every week, not status reports.",
+    },
+    {
+        number: "03",
+        title: "Ship & scale",
+        subtitle: "& improve",
+        description: "We launch, watch the analytics, and keep refining. The product gets better the longer it runs.",
+    },
+];
+
+const stats = [
+    { value: "10,000+", label: "People using our work" },
+    { value: "10", label: "Countries" },
+    { value: "15+", label: "Products shipped" },
+];
 
 const HowItWorks = () => {
     return (
         <div className="flex flex-col items-center justify-center w-full py-16 lg:py-24">
             <Wrapper>
+                {/* Heading */}
                 <Container>
-                    <div className="flex flex-col lg:flex-row items-start justify-start lg:items-end lg:justify-between px-2 md:px-0">
-                        <h2 className="text-3xl lg:text-4xl font-semibold text-left lg:text-start tracking-tight">
-                            Our proven process
-                            <br /> for delivering excellence
+                    <div className="flex flex-col lg:flex-row items-start lg:items-end lg:justify-between gap-6 px-2 md:px-0">
+                        <h2 className="font-heading font-normal text-left tracking-tight text-[#201D1D] text-[32px] md:text-[43px] leading-[1.05] md:leading-[45px] max-w-2xl">
+                            From idea to live
+                            <br /> in a few clear moves
                         </h2>
-                        <p className="text-base lg:text-lg font-normal text-muted-foreground text-left lg:text-start mt-4 lg:mt-0 max-w-md">
-                            From discovery to deployment, we follow a structured approach that ensures quality and results
+                        <p className="font-base font-normal text-left text-[#201D1D] text-[18px] md:text-[23px] leading-[28px] mt-2 lg:mt-0 max-w-md">
+                            A process built to ship quickly without the chaos — you always know what's happening and what's next.
                         </p>
                     </div>
                 </Container>
 
+                {/* Process rows */}
                 <Container delay={0.1}>
-                    <div className="flex flex-col gap-y-8 mt-10 w-full">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 border border-border hover:border-primary/40 transition-all duration-300 ease-out rounded-xl p-2">
-                            <div className="flex flex-col p-6 lg:p-8 h-full">
-                                <div className="flex items-center justify-between w-full">
-                                    <Image
-                                        src="/images/hiw01.svg"
-                                        alt="01"
-                                        width={1024}
-                                        height={1024}
-                                        className="w-10 lg:w-14 h-auto"
-                                    />
-                                    <span className="text-xl lg:text-2xl font-semibold text-neutral-700">
-                                        01
-                                    </span>
+                    <div className="mt-12 lg:mt-20 w-full px-2 md:px-0">
+                        {steps.map((step) => (
+                            <div
+                                key={step.number}
+                                className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 border-t border-border py-8 lg:py-10 group"
+                            >
+                                <span className="lg:col-span-1 font-heading font-normal text-[#201D1D]/60 text-base tabular-nums">
+                                    {step.number}
+                                </span>
+                                <div className="lg:col-span-5">
+                                    <h3 className="font-heading font-normal tracking-tight text-[#201D1D] text-2xl md:text-[28px] leading-tight">
+                                        {step.title}
+                                        <br />
+                                        {step.subtitle}
+                                    </h3>
                                 </div>
-                                <div className="flex flex-col justify-end gap-1.5 mt-6 lg:mt-auto grow h-full">
-                                    <h4 className="text-xl lg:text-2xl font-medium">
-                                        Discovery & Strategy <br /> Planning
-                                    </h4>
-                                    <p className="text-sm lg:text-base text-muted-foreground text-balance">
-                                        We start with in-depth consultation to understand your goals, challenges, and requirements
-                                    </p>
-                                </div>
+                                <p className="lg:col-span-6 font-base font-normal text-[#201D1D]/80 text-base md:text-[20px] leading-[25px] max-w-xl">
+                                    {step.description}
+                                </p>
                             </div>
-                            <div className="flex w-full">
-                                <div className="w-full border border-border/50 rounded-lg">
-                                    <Image
-                                        src="/images/hiw1.svg"
-                                        alt="01"
-                                        width={1024}
-                                        height={1024}
-                                        className="size-full object-cover"
-                                    />
-                                </div>
-                            </div>
-                        </div>
+                        ))}
+                    </div>
+                </Container>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 border border-border hover:border-primary/40 transition-all duration-300 ease-out rounded-xl p-2">
-                            <div className="flex w-full">
-                                <div className="w-full border border-border/50 rounded-lg">
-                                    <Image
-                                        src="/images/hiw2.svg"
-                                        alt="02"
-                                        width={1024}
-                                        height={1024}
-                                        className="size-full object-cover"
-                                    />
-                                </div>
+                {/* Stats */}
+                <Container delay={0.2}>
+                    <div className="mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-10 lg:gap-12 border-t border-border pt-12 lg:pt-16 px-2 md:px-0">
+                        {stats.map((stat) => (
+                            <div key={stat.label} className="flex flex-col items-center text-center gap-3">
+                                <span className="font-heading font-normal tracking-tight text-[#201D1D] text-6xl md:text-[80px] lg:text-[96px] leading-none whitespace-nowrap">
+                                    {stat.value}
+                                </span>
+                                <span className="font-base font-normal text-[#201D1D] text-base md:text-[20px] leading-[25px] whitespace-nowrap">
+                                    {stat.label}
+                                </span>
                             </div>
-                            <div className="flex flex-col p-6 lg:p-8 h-full">
-                                <div className="flex items-center justify-between w-full">
-                                    <Image
-                                        src="/images/hiw02.svg"
-                                        alt="02"
-                                        width={1024}
-                                        height={1024}
-                                        className="w-10 lg:w-14 h-auto"
-                                    />
-                                    <span className="text-xl lg:text-2xl font-semibold text-neutral-700">
-                                        02
-                                    </span>
-                                </div>
-                                <div className="flex flex-col justify-end gap-1.5 mt-6 lg:mt-auto grow h-full">
-                                    <h4 className="text-xl lg:text-2xl font-medium">
-                                        Design & Development <br /> Excellence
-                                    </h4>
-                                    <p className="text-sm lg:text-base text-muted-foreground text-balance">
-                                        Our expert team designs and builds beautiful, scalable solutions with modern technology
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 border border-border hover:border-primary/40 transition-all duration-300 ease-out rounded-xl p-2">
-                            <div className="flex flex-col p-6 lg:p-8 h-full">
-                                <div className="flex items-center justify-between w-full">
-                                    <Image
-                                        src="/images/hiw03.svg"
-                                        alt="03"
-                                        width={1024}
-                                        height={1024}
-                                        className="w-10 lg:w-14 h-auto"
-                                    />
-                                    <span className="text-xl lg:text-2xl font-semibold text-neutral-700">
-                                        03
-                                    </span>
-                                </div>
-                                <div className="flex flex-col justify-end gap-1.5 mt-6 lg:mt-auto grow h-full">
-                                    <h4 className="text-xl lg:text-2xl font-medium">
-                                        Launch & Ongoing <br /> Support
-                                    </h4>
-                                    <p className="text-sm lg:text-base text-muted-foreground text-balance">
-                                        Seamless deployment with comprehensive support and maintenance to ensure long-term success
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex w-full">
-                                <div className="w-full border border-border/50 rounded-lg">
-                                    <Image
-                                        src="/images/hiw3.svg"
-                                        alt="03"
-                                        width={1024}
-                                        height={1024}
-                                        className="size-full object-cover"
-                                    />
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </Container>
             </Wrapper>

@@ -34,7 +34,7 @@ export const BLOGS = [
     },
     {
         title: "Effective Team Collaboration",
-        desc: "Boost productivity with proven strategies for seamless team collaboration.",
+        desc: "Boost productivity with proven strategies for smooth team collaboration.",
         image: "/images/blog1.svg",
         category: "Productivity",
         author: "Michael Smith",

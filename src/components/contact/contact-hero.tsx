@@ -1,61 +1,46 @@
-import React from 'react'
-import Wrapper from "../global/wrapper"
-import Icons from "../global/icons"
-import Container from "../global/container"
-import { CONTACT_CARDS } from "@/constants";
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
+import Wrapper from "../global/wrapper";
+import Container from "../global/container";
 
 const ContactHero = () => {
     return (
-        <div className="relative z-0 w-full h-full">
-            <div className="absolute -top-16 inset-x-0 -z-10 mx-auto w-3/4 h-32 lg:h-60 rounded-full blur-[5rem] bg-[radial-gradient(86.02%_172.05%_at_50%_-40%,rgba(18,139,135,1)_0%,rgba(5,5,5,0)_80%)]"></div>
+        <div className="relative z-0 w-full bg-transparent overflow-hidden" style={{ paddingTop: "5rem" }}>
+            {/* Ambient Background Decorative Glow */}
+            <div className="absolute top-[-20%] left-[20%] w-[600px] h-[600px] bg-[#E6C565]/5 rounded-full blur-[120px] pointer-events-none -z-10" />
+            <div className="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-neutral-300/10 rounded-full blur-[100px] pointer-events-none -z-10" />
 
-            <Wrapper className="py-20">
-                <div className="flex flex-col items-center justify-center w-full z-10">
-                    <Container>
-                        <div className="flex items-center justify-center gap-x-1 px-2 py-1.5 relative w-max mx-auto rounded-full before:absolute before:inset-0 before:-z-10 before:p-[1px] before:rounded-3xl before:bg-gradient-to-b before:from-neutral-700 before:to-neutral-900 before:content-[''] after:absolute after:inset-[1px] after:-z-10 after:rounded-[22px] after:bg-[#181818]/60">
-                            <Icons.stars className="size-5" />
-                            <span className="text-sm text-white">
-                                Contact Us
-                            </span>
-                        </div>
-                    </Container>
-
+            <Wrapper className="pt-44 pb-4 lg:pt-52 lg:pb-6 relative z-10">
+                <div className="flex flex-col items-center justify-center w-full">
+                    {/* Headline */}
                     <Container delay={0.1}>
-                        <h2 className="text-balance !leading-[1.25] text-center text-4xl md:text-6xl font-semibold tracking-tight mt-6 w-full">
-                            Let's Start a Conversation
-                        </h2>
+                        <motion.h1
+                            initial={{ opacity: 0, y: 15 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+                            className="text-balance leading-[1.08] text-center font-heading font-normal tracking-tight text-[#201D1D] text-4xl md:text-6xl lg:text-[72px] mt-6 w-full max-w-4xl"
+                        >
+                            Tell us what you&apos;re building
+                        </motion.h1>
                     </Container>
 
+                    {/* Subtext */}
                     <Container delay={0.2}>
-                        <p className="text-base md:text-lg font-normal text-center text-balance text-muted-foreground max-w-3xl mx-auto mt-4">
-                            Have questions or want to learn more? We're here to help. Reach out to our team and let's discuss how we can support your needs
-                        </p>
-                    </Container>
-
-                    <Container delay={0.3} className="w-full">
-                        <div className="flex flex-col md:flex-row justify-center gap-6 w-full mt-10">
-                            {CONTACT_CARDS.map((card, index) => (
-                                <div
-                                    key={index}
-                                    className="flex flex-col items-center justify-center p-6 rounded-2xl bg-[#0A0A0A] border border-border/50"
-                                >
-                                    <div className="size-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                                        <card.icon className="size-6 text-primary" />
-                                    </div>
-                                    <h3 className="text-lg font-semibold mt-4">
-                                        {card.title}
-                                    </h3>
-                                    <p className="text-sm text-muted-foreground mt-1">
-                                        {card.value}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
+                        <motion.p
+                            initial={{ opacity: 0, y: 15 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                            className="font-base font-normal text-center text-balance text-[#201D1D]/70 text-base md:text-xl max-w-2xl mx-auto mt-6 leading-[1.62]"
+                        >
+                            A landing page, a full product, or AI for your business — send it over. We&apos;ll reply fast and tell you straight whether we&apos;re the right team and how quickly we can ship
+                        </motion.p>
                     </Container>
                 </div>
             </Wrapper>
         </div>
-    )
-}
+    );
+};
 
-export default ContactHero 
+export default ContactHero;

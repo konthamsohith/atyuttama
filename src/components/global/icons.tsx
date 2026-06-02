@@ -21,7 +21,7 @@ const Icons = {
     logo: (props: any) => (
         <div className="flex items-center gap-2" {...props}>
             <Image
-                src="/images/logo.png"
+                src="/images/logo%20favicon%20color.png"
                 alt="Atyuttama Logo"
                 width={40}
                 height={40}

@@ -7,7 +7,7 @@ export const MISSION = [
     {
         icon: "/icons/crown.svg",
         heading: "Innovative Solutions",
-        desc: "We leverage cutting-edge technologies and creative problem-solving to build solutions that give you competitive advantages."
+        desc: "We use a modern stack and creative problem-solving to build products that give you a real edge."
     },
     {
         icon: "/icons/cursor.svg",

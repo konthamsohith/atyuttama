@@ -1,21 +1,11 @@
 import { Metadata } from "next";
 
 export const generateMetadata = ({
-    title = "Atyuttama",
-    description = ``,
+    title = "Atyuttama — Creative + AI Development Studio",
+    description = `We design and build apps, websites, and enterprise software, plus real AI: copilots, calling, and marketing. Used by 10,000+ people across 10 countries.`,
     image = "/thumbnail.png",
-    icons = [
-        {
-            rel: "apple-touch-icon",
-            sizes: "32x32",
-            url: "/images/logo.png"
-        },
-        {
-            rel: "icon",
-            sizes: "32x32",
-            url: "/images/logo.png"
-        },
-    ],
+    // Default icons come from the App Router file convention (src/app/icon.png).
+    icons,
     noIndex = false
 }: {
     title?: string;

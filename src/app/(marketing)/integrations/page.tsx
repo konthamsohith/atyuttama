@@ -1,7 +1,5 @@
 import IntegrationsHero from "@/components/integrations/integrations-hero"
 import IntegrationsSection from "@/components/integrations/integrations-section"
-import Blogs from "@/components/marketing/blogs"
-import CTA from "@/components/marketing/cta"
 import Stats from "@/components/marketing/stats"
 
 const IntegrationsPage = () => {
@@ -10,7 +8,6 @@ const IntegrationsPage = () => {
             <IntegrationsHero />
             <IntegrationsSection />
             <Stats />
-            <CTA />
         </div>
     )
 };

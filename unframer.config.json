@@ -1,0 +1,14 @@
+{
+    "outDir": "src/framer",
+    "components": {
+        "cursor-mask-reveal": "https://framer.com/m/CursorMaskReveal-MSVA.js@5e7PeYzw1lgcGpdKBA03",
+        "glow-card": "https://framer.com/m/Glow-Card-m4qh.js@xTXGQutxuYVtwabuhfCz",
+        "book": "https://framer.com/m/Book-AFRs.js@mxOP9zughWqzCr7yH17p",
+        "flip-card": "https://framer.com/m/FlipCard-component-bDbX.js@IgCJCjQg25fKVg7qOlHu",
+        "image-mask-text": "https://framer.com/m/ImageMaskText-w8kR.js@6HKto33BXoCd8V6GAs1H",
+        "mouse-trail": "https://framer.com/m/Mouse-trail-q6Fq.js@VTKySs2XVK542u5K0zaJ",
+        "polaroid-ticker": "https://framer.com/m/PolaroidTicker-cVLI.js@ME0RAld2LYtGMiVxLyIs",
+        "text-carousel": "https://framer.com/m/Text-Carousel-Igq7.js@2OAw8ZMDoCKGGDVhFnuE",
+        "image-sequence": "https://framer.com/m/ImageSequence-IJSj.js@6G3H6mdZZNPIcZXzNhhsbuikd"
+    }
+}

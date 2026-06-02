@@ -57,7 +57,7 @@ const Item = ({ item, index }: { item: Blog, index: number }) => (
                 />
             </div>
             <div className="flex flex-col mt-4">
-                <span className="inline-block px-3 py-1 rounded-sm bg-neutral-800/80 text-xs text-foreground/80 w-max">
+                <span className="inline-block px-3 py-1 rounded-sm bg-neutral-200 text-xs text-neutral-800 w-max font-medium">
                     {item.category}
                 </span>
                 <Link

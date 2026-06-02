@@ -11,7 +11,7 @@ const Companies = () => {
                 <Container>
                     <div className="flex flex-col items-center justify-center px-2 md:px-0">
                         <h4 className="text-xl lg:text-2xl font-semibold text-center tracking-tight">
-                            Trusted by innovative companies worldwide
+                            Trusted by teams building in healthcare, marketing, social, and beyond
                         </h4>
                     </div>
                 </Container>
@@ -20,13 +20,13 @@ const Companies = () => {
                     <div className="mt-10 w-full relative overflow-hidden">
                         <Marquee pauseOnHover className="[--duration:30s]">
                             <div className="flex gap-8 md:gap-12">
-                                <Image src="/images/company1.svg" alt="Company 1" width={1024} height={1024} className="w-24 h-8" />
-                                <Image src="/images/company2.svg" alt="Company 2" width={1024} height={1024} className="w-24 h-8" />
-                                <Image src="/images/company3.svg" alt="Company 3" width={1024} height={1024} className="w-24 h-8" />
-                                <Image src="/images/company4.svg" alt="Company 4" width={1024} height={1024} className="w-24 h-8" />
-                                <Image src="/images/company5.svg" alt="Company 5" width={1024} height={1024} className="w-24 h-8" />
-                                <Image src="/images/company6.svg" alt="Company 6" width={1024} height={1024} className="w-24 h-8" />
-                                <Image src="/images/company7.svg" alt="Company 7" width={1024} height={1024} className="w-24 h-8" />
+                                <Image src="/images/company1.svg" alt="Company 1" width={1024} height={1024} className="w-24 h-8 brightness-0" />
+                                <Image src="/images/company2.svg" alt="Company 2" width={1024} height={1024} className="w-24 h-8 brightness-0" />
+                                <Image src="/images/company3.svg" alt="Company 3" width={1024} height={1024} className="w-24 h-8 brightness-0" />
+                                <Image src="/images/company4.svg" alt="Company 4" width={1024} height={1024} className="w-24 h-8 brightness-0" />
+                                <Image src="/images/company5.svg" alt="Company 5" width={1024} height={1024} className="w-24 h-8 brightness-0" />
+                                <Image src="/images/company6.svg" alt="Company 6" width={1024} height={1024} className="w-24 h-8 brightness-0" />
+                                <Image src="/images/company7.svg" alt="Company 7" width={1024} height={1024} className="w-24 h-8 brightness-0" />
                             </div>
                         </Marquee>
                         <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>

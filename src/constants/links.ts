@@ -1,11 +1,7 @@
 export const NAV_LINKS = [
     {
-        name: "About",
-        link: "/about",
-    },
-    {
         name: "Services",
-        link: "/integrations",
+        link: "/services/app-development",
     },
     {
         name: "Contact",
@@ -14,13 +10,11 @@ export const NAV_LINKS = [
 ];
 
 export const PRODUCT_LINKS = [
-    { label: "About Us", href: "/about" },
-    { label: "Our Services", href: "/integrations" },
+    { label: "Our Services", href: "/services/app-development" },
     { label: "Get Started", href: "/contact" },
 ];
 
 export const RESOURCES_LINKS = [
-    { label: "Help Center", href: "/help" },
     { label: "Documentation", href: "/docs" },
     { label: "Contact Us", href: "/contact" },
 ];

@@ -45,7 +45,7 @@ export const INTEGRATIONS: Integration[] = [
     },
     {
         name: "Python & Django",
-        description: "Robust backend development with Python and Django for complex business logic and data processing.",
+        description: "Reliable backend development with Python and Django for complex business logic and data processing.",
         icon: "/icons/computer.svg",
         category: "backend"
     },
@@ -57,7 +57,7 @@ export const INTEGRATIONS: Integration[] = [
     },
     {
         name: "OpenAI Integration",
-        description: "Leverage GPT and other OpenAI models to build intelligent, conversational AI solutions for your business.",
+        description: "GPT and other OpenAI models, wired in to build intelligent, conversational AI for your business.",
         icon: "/icons/stars.svg",
         category: "ai"
     },
@@ -69,7 +69,7 @@ export const INTEGRATIONS: Integration[] = [
     },
     {
         name: "Firebase",
-        description: "Real-time database, authentication, and hosting solutions for rapid development and seamless user experiences.",
+        description: "Real-time database, authentication, and hosting for rapid development and smooth user experiences.",
         icon: "/icons/pie.svg",
         category: "backend"
     },

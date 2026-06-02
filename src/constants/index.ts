@@ -1,7 +1,6 @@
 import { base, heading } from "./fonts";
 import { TESTIMONIALS } from "./testimonials";
 import { NAV_LINKS, PRODUCT_LINKS, RESOURCES_LINKS } from "./links";
-import { PRICING_PLANS } from "./pricing";
 import { FEATURES } from "./features";
 import { FAQS, QUESTIONS } from "./faqs";
 import { STATS } from "./stats";
@@ -16,7 +15,6 @@ export {
     NAV_LINKS,
     PRODUCT_LINKS,
     RESOURCES_LINKS,
-    PRICING_PLANS,
     FEATURES,
     FAQS,
     STATS,
