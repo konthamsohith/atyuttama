@@ -198,13 +198,6 @@ const Navbar = () => {
                                             >
                                                 Our Mission
                                             </Link>
-                                            <Link
-                                                href="/our-team"
-                                                onClick={() => setIsOpen(false)}
-                                                className="text-2xl font-medium tracking-tight text-white/90 hover:text-[#E6C565] transition-all duration-300 cursor-pointer"
-                                            >
-                                                Our Team
-                                            </Link>
                                         </div>
                                     </div>
 

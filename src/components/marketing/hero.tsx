@@ -6,15 +6,16 @@ import Icons from "../global/icons";
 import Image from "next/image";
 import Container from "../global/container";
 import { Button } from "../ui/button";
-import Book3D from "./book-3d";
-import EarthGlobe from "./earth-globe";
-import AnimatedFlowPaths from "./flow-paths";
-import MagneticHoverCards from "./magnetic-hover-cards";
-import MaskHoverReveal from "./mask-hover-reveal";
-import ImageSpinner from "./image-spinner";
-import TextPressure from "./text-pressure";
-import Ripple from "./ripple";
-import AnimatedTextReveal from "./animated-text-reveal";
+// Framer-derived showcase components — kept (commented out), replaced by mp4 loops in /public/videos.
+// import Book3D from "./book-3d";
+// import EarthGlobe from "./earth-globe";
+// import AnimatedFlowPaths from "./flow-paths";
+// import MagneticHoverCards from "./magnetic-hover-cards";
+// import MaskHoverReveal from "./mask-hover-reveal";
+// import ImageSpinner from "./image-spinner";
+// import TextPressure from "./text-pressure";
+// import Ripple from "./ripple";
+// import AnimatedTextReveal from "./animated-text-reveal";
 import ScrollReveal from "./scroll-reveal";
 import type { ReactNode } from "react";
 
@@ -26,6 +27,8 @@ interface ShowcaseCard {
     bg: string;
     show: string;
     center?: boolean;
+    /** mp4 loop (in /public/videos) shown in the card preview. */
+    video?: string;
     icon?: ReactNode;
     /** Heavy/animated tiles render via this so they can animate only when front (active). */
     render?: (active: boolean) => ReactNode;
@@ -33,30 +36,33 @@ interface ShowcaseCard {
 
 const showcaseCards: ShowcaseCard[] = [
     {
-        title: "Magnetic Hover Cards",
+        title: "Dropping Card Stack",
         url: "https://framer.com/m/social-grid-gP9vhs.js@ioa56WApmzG6zcNI7zOd",
-        label: "Hover",
+        label: "Cards",
         dark: true,
         bg: "bg-[#0a0a0a]",
-        icon: <MagneticHoverCards width={244} height={150} />,
+        video: "/videos/osmo-dropping-cards-stack-1440x900.mp4",
+        // icon: <MagneticHoverCards width={244} height={150} />,
         show: "hidden 2xl:block",
     },
     {
-        title: "Text Pressure",
+        title: "Pixel Transition",
         url: "https://framer.com/m/TextPressure-y92d.js@LAQguO8Civb6UXOmpMCm",
-        label: "Variable",
+        label: "Pixel",
         dark: true,
         bg: "bg-[#05070d]",
-        render: (active) => <TextPressure text="Force" width={244} height={150} active={active} />,
+        video: "/videos/osmo-pixelated-scroll-transition-1440x900.mp4",
+        // render: (active) => <TextPressure text="Force" width={244} height={150} active={active} />,
         show: "hidden xl:block",
     },
     {
-        title: "Book",
+        title: "Date Picker",
         url: "https://framer.com/m/Book-AFRs.js@mxOP9zughWqzCr7yH17p",
-        label: "3D",
-        dark: false,
-        bg: "bg-[#F5F3ED]",
-        icon: (
+        label: "Calendar",
+        dark: true,
+        bg: "bg-[#0d0d0d]",
+        video: "/videos/osmo-events-calendar-date-picker-1440x900.mp4",
+        /* icon: (
             <Book3D
                 title="Steve Jobs"
                 tag="Walter Isaacson"
@@ -66,62 +72,68 @@ const showcaseCards: ShowcaseCard[] = [
                 coverClassName="from-neutral-700 via-neutral-800 to-black"
                 width={96}
             />
-        ),
+        ), */
         show: "hidden lg:block",
     },
     {
-        title: "Flow Paths",
+        title: "Expanding Pills",
         url: "https://framer.com/m/Animated-Flow-Paths-0GK1.js@ul9qXjtHnW5FP14TAXJd",
-        label: "Flow",
-        dark: false,
-        bg: "bg-white",
-        icon: <AnimatedFlowPaths width={236} height={148} />,
+        label: "Pills",
+        dark: true,
+        bg: "bg-[#0d0d0d]",
+        video: "/videos/osmo-expanding-feature-pills-1440x900.mp4",
+        // icon: <AnimatedFlowPaths width={236} height={148} />,
         show: "hidden md:block",
     },
     {
-        title: "Mask Hover Reveal",
+        title: "Shutter Transition",
         url: "https://framer.com/m/LorenzoInteractivePortrait-oP29.js@tqnpAXVxZTj4euFM4cqv",
-        label: "Reveal",
+        label: "Shutter",
         dark: true,
         center: true,
         bg: "bg-[#0a0a0a]",
-        icon: <MaskHoverReveal width={244} height={150} />,
+        video: "/videos/osmo-shutter-page-transition-1440x900.mp4",
+        // icon: <MaskHoverReveal width={244} height={150} />,
         show: "block",
     },
     {
-        title: "Animated Text Reveal",
+        title: "Sticky Steps",
         url: "https://framer.com/m/Scroll-reveal-1-1-a79i.js@WIuZdq66zHREPFyhtccI",
-        label: "Reveal",
+        label: "Steps",
         dark: true,
         bg: "bg-[#0d0d0d]",
-        icon: <AnimatedTextReveal width={244} height={150} />,
+        video: "/videos/osmo-sticky-steps-basic-1440x900.mp4",
+        // icon: <AnimatedTextReveal width={244} height={150} />,
         show: "hidden md:block",
     },
     {
-        title: "Earth Globe",
+        title: "Interactive Globe",
         url: "https://framer.com/m/TacticalGlobe3D-uVMtXj.js@UhPxNuaENi2YMvlzEzft",
-        label: "3D",
+        label: "Globe",
         dark: true,
         bg: "bg-[#0e1116]",
-        render: (active) => <EarthGlobe size={150} active={active} />,
+        video: "/videos/osmo-interactive-globe-mapbox-1440x900.mp4",
+        // render: (active) => <EarthGlobe size={150} active={active} />,
         show: "hidden lg:block",
     },
     {
-        title: "Ripple",
+        title: "Image Sequence",
         url: "https://framer.com/m/Ripple-Qymb.js@YGTvnr2Zbs54i2DJOYbY",
-        label: "Water",
+        label: "Scroll",
         dark: true,
         bg: "bg-[#0d0d0d]",
-        render: (active) => <Ripple image="/images/ripple-portrait.jpg" width={244} height={150} active={active} />,
+        video: "/videos/osmo-image-sequence-on-scroll-1440x900.mp4",
+        // render: (active) => <Ripple image="/images/ripple-portrait.jpg" width={244} height={150} active={active} />,
         show: "hidden xl:block",
     },
     {
-        title: "Image Spinner",
+        title: "Image Trail",
         url: "https://framer.com/m/ImageSpinner-Niv1.js@gAGEAwSCZhbZg7v0eBsq",
-        label: "Spin",
+        label: "Trail",
         dark: true,
         bg: "bg-[#0d0d0d]",
-        icon: <ImageSpinner width={244} height={150} />,
+        video: "/videos/osmo-rotating-image-trail-1440x900.mp4",
+        // icon: <ImageSpinner width={244} height={150} />,
         show: "hidden 2xl:block",
     },
 ];
@@ -228,8 +240,6 @@ const Hero = () => {
                     <Container delay={0.4} className="w-full overflow-visible">
                         <div
                             className="relative w-full max-w-7xl mx-auto h-[480px] md:h-[580px] lg:h-[640px] -mt-8 flex items-end justify-center px-4 overflow-visible group"
-                            onMouseEnter={() => { pausedRef.current = true; }}
-                            onMouseLeave={() => { pausedRef.current = false; }}
                         >
                             {/* Subtle background blur backing the card stack */}
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-neutral-200/10 rounded-full blur-3xl -z-10 pointer-events-none" />
@@ -307,8 +317,9 @@ const Hero = () => {
                                         }}
                                     >
                                         <div
-                                            className="relative w-[290px] h-[230px] rounded-md border border-neutral-700/70 bg-[#2b2a2a] shadow-xl p-3 flex flex-col"
+                                            className="relative w-[290px] h-[230px] rounded-sm shadow-xl px-2 pt-2 pb-1.5 flex flex-col"
                                             style={{
+                                                backgroundColor: "#E6C565",
                                                 transform: mounted ? "translateY(0)" : "translateY(160px)",
                                                 opacity: mounted ? 1 : 0,
                                                 transition: "transform 0.8s cubic-bezier(0.22,1,0.36,1), opacity 0.8s ease-out",
@@ -321,12 +332,24 @@ const Hero = () => {
                                                 <span className={`absolute top-2.5 left-2.5 z-10 text-[8px] font-mono tracking-widest uppercase ${card.dark ? "text-white/50" : "text-neutral-500"}`}>
                                                     {card.label}
                                                 </span>
-                                                <div className="absolute inset-0 flex items-center justify-center select-none">
-                                                    {card.render ? card.render(dist === 0) : card.icon}
-                                                </div>
+                                                {card.video ? (
+                                                    <video
+                                                        src={card.video}
+                                                        autoPlay
+                                                        loop
+                                                        muted
+                                                        playsInline
+                                                        preload="auto"
+                                                        className="absolute inset-0 h-full w-full object-cover"
+                                                    />
+                                                ) : (
+                                                    <div className="absolute inset-0 flex items-center justify-center select-none">
+                                                        {card.render ? card.render(dist === 0) : card.icon}
+                                                    </div>
+                                                )}
                                             </div>
                                             {/* Title row */}
-                                            <h5 className="shrink-0 mt-3 px-0.5 text-[14px] md:text-[15px] font-medium font-base leading-tight text-white">
+                                            <h5 className="shrink-0 mt-1.5 px-0.5 text-[14px] md:text-[15px] font-medium font-base leading-tight text-white">
                                                 {card.title}
                                             </h5>
                                         </div>
